@@ -1,0 +1,17 @@
+:root {
+    --main-color: #ffffff;
+    --sub-color:#222222;
+}
+
+body {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+h1 {
+    border-bottom: 2px solid var(--main-color);
+}
+
+h2 {
+    border-bottom: 1px solid var(--main-color);
+}

@@ -1,0 +1,36 @@
+#menu {
+    width: 480px;
+    margin-left: 2em;
+}
+
+#menu li{
+    list-style: none;
+    margin: 0.2em;
+    padding: 0.4em 0;
+}
+
+#menu li a {
+    color: var(--sub-color);
+    background-color: #cccccc;
+    display: inline-block;
+    border:1px solid #bbbbbb;
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    transition: background-color 1s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#menu li a:hover {
+    background-color: #ffffff;
+}
+
+#menu li ul {
+    padding-top:0.4em;
+}
+
+/*
+#menu #sub-menu {
+    display:none;
+}
+*/
