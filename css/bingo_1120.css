@@ -1,0 +1,16 @@
+#results, #about_bingo {
+    float: left;
+}
+
+#results {
+    padding-right: 10px;
+}
+
+#about_bingo {
+    border-left: solid 1px var(--main-color);
+    padding-left: 10px;
+}
+
+#bingoPage {
+    overflow: auto;
+}

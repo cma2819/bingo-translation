@@ -1,52 +1,98 @@
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(http://themes.googleusercontent.com/static/fonts/merriweather/v4/ZvcMqxEwPfh2qDWBPxn6nnl4twXkwp3_u9ZoePkT564.woff) format('woff');
-}
-@font-face {
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Merriweather'), url(http://themes.googleusercontent.com/static/fonts/merriweather/v4/RFda8w1V0eDZheqfcyQ4EHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+#content {
+    margin-left: 2em;
 }
 
-#bingo img {
-    max-width:  95px; 
-    max-height: 70px;  
-    display: block;
-    margin: auto;
+#bingo {
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: smaller;
+    margin-right: 20px;
 }
 
-#sortButtons { overflow:visible; }
+#bingo td {
+    background-color: #000000;
+    border:1px solid var(--main-color);
+    padding: 0.2em;
+    text-align: center;
+    cursor: pointer;
+}
 
-.sortButton {
+#bingo td#tlbr, #bingo td#bltr {
+    width: 4em;
+    height: 1.5em;
+    font-weight: bold;
+}
+
+#bingo td.popout-row {
+    width: 4em;
+    font-weight: bold;
+}
+
+#bingo td.popout-col {
+    height: 4em;
+    font-weight: bold;
+}
+
+#bingo td.popout, #bingo td.popout-row, #bingo td.popout-col {
+    font-size: smaller;
+}
+
+#bingo td {
+    width: 95px;
+    height: 90px;
+}
+
+#bingo td:hover, #bingo td.hover {
+    background-color:rgba(32,32,32,0.5);
+}
+
+#bingo td.popout:hover, #bingo td.popout-col:hover, #bingo td.popout-row:hover {
+    background-color:rgba(64, 64, 64, 0.5);
+}
+
+#bingo td.c_1 {
+    background-color:rgba(0,128,0,0.5);
+}
+#bingo td.c_1:hover, #bingo td.c_1.hover {
+    background-color:rgba(32,160,32,0.5);
+}
+
+#bingo td.c_2 {
+    background-color:rgba(128,0,0,0.5);
+}
+#bingo td.c_2:hover, #bingo td.c_2.hover {
+    background-color:rgba(160,32,32,0.5);
+}
+
+#bingo td.c_3 {
+    background-color:rgba(0,0,128,0.5);
+}
+#bingo td.c_3:hover, #bingo td.c_3.hover {
+    background-color:rgba(32,32,160,0.5);
+}
+
+#results p {
+    text-align: right;
+}
+
+#bingoPage a.sortButton {
+    color: var(--sub-color);
+    background-color: #cccccc;
+    display: inline-block;
+    border:1px solid #bbbbbb;
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    transition: background-color 1s ease;
     cursor: pointer;
     font-weight: bold;
-    text-shadow: black 1px 1px 1px;
-    color: white;
-    margin-left: 6px;
-    margin-right: 2px;
-    text-decoration: none;
-    padding: 4px 18px;
-    text-align: center;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    border-left: 2px solid #2339A4;
-    border-right: 2px solid #1A2A88;
-    border-top: 2px solid #244CA6;
-    border-bottom: 2px solid #192686;
-    background-color: #1E3294;
-    background: -moz-linear-gradient(top, #2045C0 0%, #1E3294 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2045c0', endColorstr='#1e3294',GradientType=0 );
+    text-decoration-line: none;
 }
 
-.note {
-    color: gray;
-    font-size: 11px;
-    font-style: italic;
-    line-height: 12px;
-    display: block;
-    padding-top: 3px;
-    padding-bottom: 3px;
+#bingoPage a.sortButton:hover {
+    background-color: #ffffff;
+}
+
+#credit {
+    font-size: smaller;
+    text-align: right;
 }

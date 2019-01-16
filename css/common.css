@@ -1,6 +1,12 @@
 :root {
     --main-color: #ffffff;
-    --sub-color:#222222;
+    --sub-color:#202020;
+}
+
+html {
+    font-family:'ヒラギノ角ゴシック', 'Hiragino Sans',
+	'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ',
+	'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 body {
@@ -11,7 +17,14 @@ body {
 h1 {
     border-bottom: 2px solid var(--main-color);
 }
+h1 a {
+    text-decoration-line: none;
+}
 
 h2 {
     border-bottom: 1px solid var(--main-color);
+}
+
+a {
+    color:var(--main-color);
 }

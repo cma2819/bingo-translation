@@ -9,6 +9,11 @@
     padding: 0.4em 0;
 }
 
+#menu li span.head {
+    border-bottom:1px solid #bbbbbb;
+    font-weight: bold;
+}
+
 #menu li a {
     color: var(--sub-color);
     background-color: #cccccc;
@@ -19,6 +24,7 @@
     transition: background-color 1s ease;
     cursor: pointer;
     font-weight: bold;
+    text-decoration-line: none;
 }
 
 #menu li a:hover {

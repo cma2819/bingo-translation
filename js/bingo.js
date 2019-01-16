@@ -66,8 +66,11 @@ var bingo = function(bingoList, size) {
 		lineCheckList[24] = [20,21,22,24,3,8,13,18];
 		lineCheckList[25] = [0,6,12,18,20,21,22,23,19,14,9,4];
 	}
-
+/*
+	Edit: Change selector because DOM classname is changed
 	$('.popout').click(function() {
+*/
+	$('.popout, .popout-col, .popout-row').click(function() {
 		var mode = null;
 		var line = $(this).attr('id');
 		var name = $(this).html();
@@ -81,11 +84,22 @@ var bingo = function(bingoList, size) {
 		else {
 		  window.open('./bingo-popout.html#'+ name +'='+ items.join(';;;'),"_blank","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=220, height=460"); }
 	});
-
+/*
+	Edit: Change selector because DOM classname is changed
 	$("#bingo tr td:not(.popout), #selected td").toggle(
+*/
+$("#bingo tr td:not(.popout, .popout-col, .popout-row), #selected td").toggle(
+/*
+	Edit: Change classname setting function
+
 		function () { $(this).addClass("greensquare"); },
 		function () { $(this).addClass("redsquare").removeClass("greensquare"); },
 		function () { $(this).removeClass("redsquare"); }
+*/
+		function() { $(this).addClass('c_1'); },
+		function() { $(this).addClass('c_2').removeClass('c_1'); },
+		function() { $(this).addClass('c_3').removeClass('c_2'); },
+		function() { $(this).removeClass('c_3')}
 	);
 
 	$("#row1").hover(function() { $(".row1").addClass("hover"); }, function() {	$(".row1").removeClass("hover"); });
